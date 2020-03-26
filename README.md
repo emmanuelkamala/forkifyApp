@@ -9,9 +9,9 @@ Additional description about the project and its features.
 
 ## Built With
 
+- Modern Javascript(ES6)
 - HTML
 - CSS
-- Modern Javascript(ES6)
 - Webpack
 - Babel
 
