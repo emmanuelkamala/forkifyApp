@@ -1,10 +1,26 @@
-//710a4de4299c4cb5a8e40985d09c12b1
-// https://api.spoonacular.com/food/products/search?query=yogurt&apiKey=API-KEY
+
 // Global app controller
  
 import Search from './js/models/Search';
 
-const search = new Search('pizza');
-console.log(search);
+const state = {};
 
-search.getResults();
+const controlSearch = async () => {
+   const query = 'pizza';
+
+   if (query) {
+       state.search = new Search(query);
+
+
+      await state.search.getResults();
+
+      console.log(state.search.result);
+   }
+}
+
+document.querySelector('.search').addEventListener('submit', e => {
+    e.preventDefault();
+    controlSearch();
+})
+
+
